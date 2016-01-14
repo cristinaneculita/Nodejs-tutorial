@@ -1,0 +1,29 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "jade": "^1.11.0",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "mssql": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-inject": "^1.5.0",
+    "gulp-nodemon": "^2.0.6",
+    "wiredep": "^3.0.0"
+  }
+}
