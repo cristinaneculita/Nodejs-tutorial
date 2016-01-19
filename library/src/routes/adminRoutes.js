@@ -8,30 +8,35 @@ var books =[
         title: 'War and piece',
         genre: 'Historical fiction',
         author:'Lev Tolstoy',
+        bookId : 656,
         read: false
     },
       {
         title: 'Les Miserables',
         genre: 'Historical fiction',
         author:'Victor Hugo',
+        bookId: 24280,
         read: true
     },
       {
         title: 'Morometii',
         genre: 'Fiction',
         author:'Marin Preda',
+        bookId: 20687800,
         read: true
     },
       {
         title: 'Misterele Berlinului',
         genre: 'Fiction',
         author:'Joseph Kanon',
+        bookId: 22841639,
         read: false
     },
       {
         title: 'Sub aceeasi stea',
         genre: 'Young adult',
         author:'John Green',
+        bookId: 17880024,
         read: false
     }
 ];

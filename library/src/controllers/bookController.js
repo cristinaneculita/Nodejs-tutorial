@@ -8,7 +8,7 @@ var bookController = function(bookService, nav){
             //res.redirect('/');
         }
         next();
-    }
+    };
     var getIndex = function(req,res){
        var url = 'mongodb://localhost:27017/libraryApp';
        mongodb.connect(url, function(err, db){
@@ -23,7 +23,7 @@ var bookController = function(bookService, nav){
                }
            );       
     });
- };
+  };
 
     var getById = function(req,res){
             var id = new objectId(req.params.id);
@@ -32,19 +32,33 @@ var bookController = function(bookService, nav){
                 var collection =db.collection('books');
                 collection.findOne({_id:id}, 
                     function(err, results){
-                        res.render('bookView',{
-                            title:'Books',
-                            nav:nav,
-                            book: results
-                        });
-                    }
-                );       
+                        if(results.bookId){
+                           bookService.getBookById(results.bookId,
+                                function(err, book){
+                                    results.book = book;
+                                    res.render('bookView',{
+                                        title:'Books',
+                                        nav:nav,
+                                        book: results
+                                });
+                             }); 
+                        }
+                        else{
+                              res.render('bookView',{
+                                        title:'Books',
+                                        nav:nav,
+                                        book: results
+                             });
+                        }
+                          
+                    });       
             });
     };
 
     return{
         getIndex:getIndex,
-        getById: getById
+        getById: getById,
+        middleware: middleware
     };
 };
 
