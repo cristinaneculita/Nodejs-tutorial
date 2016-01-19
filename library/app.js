@@ -57,3 +57,7 @@ app.listen(port, function(err){
     console.log('running server on port: '+port);
 });
 
+
+
+//npm start
+//gulp start
